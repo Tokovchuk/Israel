@@ -1,0 +1,117 @@
+.header {
+  position: relative;
+  padding-top: 47px;
+  padding-bottom: 146px;
+  background-image: url("../img/girl.png"), url("../img/israel.png"), url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%, 50% 28%, 50% 0;
+  text-align: center;
+}
+
+.header__menu {
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 1171px;
+}
+
+.header__logo {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu a[href] {
+  font-family: "Fira sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $black;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.header__call {
+  border-bottom: 1px dashed $black;
+
+  &:hover {
+    border-bottom: 1px dashed $yellow;
+  }
+}
+
+.header__title {
+  margin: 0 auto;
+  margin-bottom: 32px;
+  padding-top: 472px;
+  font-family: "Fira sans", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: #ffffff;
+  max-width: 380px;
+}
+
+@media (max-width: $tablet-max) {
+  .header {
+    background-position: 48% 100%, 50% 28%, 50% 0%;
+    background-size: 1255px, 100%, cover;
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 16px;
+    background-position: 50% -100%, 50% 38%, 50% 0%;
+    background-size: 920px, 107%, cover;
+  }
+
+  .header__contacts {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .header__logo {
+    width: 120px;
+    height: 42px;
+    top: 20px;
+    left: 16px;
+    transform: translateX(0);
+  }
+
+  .header__menu a {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .header__title {
+    margin: 0 auto;
+    margin-bottom: 32px;
+    padding-top: 272px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 380px;
+  }
+}
