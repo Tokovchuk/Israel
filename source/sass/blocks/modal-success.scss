@@ -1,0 +1,126 @@
+.modal-success {
+  padding-top: 216px;
+  padding-bottom: 112px;
+  padding-left: 60px;
+  padding-right: 60px;
+  position: absolute;
+  top: 123px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.modal-success h2 {
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+  color: $blue;
+}
+
+.modal-success p {
+  margin: 0;
+  margin-bottom: 32px;
+  font-family: "Fira sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: $black;
+  opacity: 0.87;
+}
+
+.modal-success__btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  width: 264px;
+  border: 0;
+  border-radius: 80px;
+  background: $gradient;
+  font-family: "Fira sans", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff; 
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+
+  &:hover {
+    background: $gradient__hover;
+  }
+
+  &:active {
+    background: $gradient__active;
+  }
+}
+
+.modal-success__close {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 20px;
+  right: 20px;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  background: 0;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -1px;
+    width: 22px;
+    height: 2px;
+    background-color: $yellow;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .modal-success {
+    padding-top: 200px;
+    padding-bottom: 292px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .modal-success h2 {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+  }
+  
+  .modal-success p {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
