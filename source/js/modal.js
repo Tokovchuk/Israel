@@ -113,4 +113,3 @@ button.addEventListener('click', function (evt) {
 //   uploadForm(new FormData(form), onSuccessUpload);
 //   evt.preventDefault();
 // });
-

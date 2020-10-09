@@ -1,0 +1,160 @@
+.panel__list {
+  @include clearlist;
+  text-align: left;
+}
+
+.panel__item a {
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: $black;
+  opacity: 0.87;
+}
+
+.panel__item {
+  margin-right: 94px;
+  padding-left: 72px;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  width: 195px;
+  position: relative;
+
+  &--active {
+    background-image: $gradient;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -64px;
+      top: 0;
+      border: 34px solid transparent;
+      border-left: 30px solid #ffd701;
+    }
+  }
+
+  &:hover a {
+    color: $yellow;
+  }
+
+  &--active a {
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  &--active:hover a {
+    color: #ffffff;
+  }
+}
+
+
+.panel__link {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -45px;
+    top: -9px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/png-sprite.png");
+  }
+
+  &--general::before {
+    background-position: -10px -50px;
+  }
+
+  &--academy::before {
+    background-position: -58px -49px;
+  }
+
+  &--practice::before {
+    background-position: -108px -57px;
+  }
+
+  &--volunteer::before {
+    background-position: -156px -53px;
+  }
+
+  &--religion::before {
+    background-position: 43px -55px;
+  }
+}
+
+.panel__item:hover .panel__link {
+  &--general::before {
+    background-position: -10px 50px;
+  }
+
+  &--academy::before {
+    background-position: -58px 51px;
+  }
+
+  &--practice::before {
+    background-position: -108px 43px;
+  }
+
+  &--volunteer::before {
+    background-position: -156px 47px;
+  }
+
+  &--religion::before {
+    background-position: 43px 45px;
+  }
+}
+
+.panel__item--active .panel__link,
+.panel__item--active:hover .panel__link {
+  &--general::before {
+    background-position: -10px -7px;
+  }
+
+  &--academy::before {
+    background-position: -58px -6px;
+  }
+
+  &--practice::before {
+    background-position: -108px -14px;
+  }
+
+  &--volunteer::before {
+    background-position: -156px -10px;
+  }
+
+  &--religion::before {
+    background-position: 43px -12px;
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .panel__list {
+    margin-bottom: 32px;
+    display: flex;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .panel__item {
+    margin-right: 0;
+    padding-top: 15px;
+    padding-right: 12px;
+    padding-bottom: 14px;
+
+    &--active {
+      border-radius: 80px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -64px;
+        top: 0;
+        border: none;
+      }
+    }
+  }
+}

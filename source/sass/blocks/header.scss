@@ -2,9 +2,11 @@
   position: relative;
   padding-top: 47px;
   padding-bottom: 146px;
+  background-color: #ebecee;
   background-image: url("../img/girl.png"), url("../img/israel.png"), url("../img/bg.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%, 50% 28%, 50% 0;
+  background-position: 48% 100%, 50% 28%, 50% 50%;
+  background-size: auto, auto, cover;
   text-align: center;
 }
 
@@ -13,16 +15,6 @@
   padding-left: 12px;
   padding-right: 12px;
   max-width: 1171px;
-}
-
-.header__logo {
-  position: absolute;
-  top: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.header__contacts {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +60,6 @@
 
 @media (max-width: $tablet-max) {
   .header {
-    background-position: 48% 100%, 50% 28%, 50% 0%;
     background-size: 1255px, 100%, cover;
   }
 }
@@ -77,21 +68,21 @@
   .header {
     padding-top: 20px;
     padding-bottom: 16px;
-    background-position: 50% -100%, 50% 38%, 50% 0%;
+    background-position: 50% -100%, 50% 38%, 50% 50%;
     background-size: 920px, 107%, cover;
   }
 
-  .header__contacts {
+  .header__menu {
     flex-direction: column;
     align-items: flex-end;
   }
 
   .header__logo {
+    position: absolute;
     width: 120px;
     height: 42px;
     top: 20px;
     left: 16px;
-    transform: translateX(0);
   }
 
   .header__menu a {

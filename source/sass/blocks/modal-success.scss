@@ -52,8 +52,8 @@
   font-size: 17px;
   line-height: 20px;
   text-align: center;
-  color: #ffffff; 
-  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   cursor: pointer;
 
   &:hover {
@@ -117,7 +117,7 @@
     line-height: 29px;
     text-align: center;
   }
-  
+
   .modal-success p {
     font-size: 14px;
     line-height: 22px;
