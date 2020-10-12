@@ -1,0 +1,157 @@
+.iwanttogo {
+  padding-top: 209px;
+  padding-bottom: 131px;
+  background-image: url("../../img/backpack.png");
+  background-repeat: no-repeat;
+  background-position: left 170px;
+  overflow: hidden;
+}
+
+.iwanttogo__wrapper {
+  margin: 0 auto;
+  padding-left: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 1005px;
+}
+
+.iwanttogo__call {
+  width: 477px;
+}
+
+.iwanttogo__call h2 {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $blue;
+}
+
+.iwanttogo__call p {
+  margin: 0 auto;
+  margin-bottom: 64px;
+  padding-right: 50px;
+  max-width: 720px;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 29px;
+  color: $black;
+}
+
+.iwanttogo__form {
+  position: relative;
+}
+
+.iwanttogo__form input {
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  width: 100%;
+  border-radius: 80px;
+  border: 2px solid #e3e3e3;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $black;
+  opacity: 0.5;
+}
+
+.iwanttogo button {
+  width: 216px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid transparent;
+  border-radius: 80px;
+  background-image: $gradient;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.iwanttogo img {
+  position: absolute;
+  right: -17%;
+  top: -80%;
+  z-index: -1;
+  width: auto;
+  max-width: 818px;
+  max-height: 594px;
+}
+
+@media (max-width: $tablet-max) {
+  .iwanttogo img {
+    transform: scale(0.7);
+  }
+
+  .iwanttogo__call {
+    width: 50%;
+  }
+
+  .iwanttogo__call p {
+    padding-right: 170px;
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .iwanttogo__wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .iwanttogo img {
+    position: static;
+    width: 100%;
+    transform: none;
+    min-width: 424px;
+  }
+
+  .iwanttogo__call {
+    width: 100%;
+  }
+
+  .iwanttogo__call h2 {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+  }
+
+  .iwanttogo__call p {
+    padding: 0;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .iwanttogo__form input {
+    margin-bottom: 8px;
+  }
+
+  .iwanttogo button {
+    display: block;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+}

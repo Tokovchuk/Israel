@@ -1,0 +1,83 @@
+.steps p {
+  margin-bottom: 24px;
+  padding-right: 100px;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 29px;
+  color: rgba(72, 72, 72, 0.87);
+
+  &:last-child {
+    padding-left: 16px;
+    font-family: "Fira Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: rgba(72, 72, 72, 0.5);
+    border-left: 4px solid $yellow;
+  }
+}
+
+.steps__list {
+  padding-right: 100px;
+  counter-reset: myCounter;
+  margin-bottom: 48px;
+  padding-left: 42px;
+  border-left: 1px dashed rgba(72, 72, 72, 0.87);
+}
+
+.steps__item {
+  margin-bottom: 40px;
+  position: relative;
+  list-style: none;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  color: rgba(72, 72, 72, 0.87);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    position: absolute;
+    top: 0;
+    left: -61px;
+    color: $yellow;
+    background: #ffffff;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .steps p {
+    padding: 0;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 26px;
+
+    &:last-child {
+      padding-left: 16px;
+      font-family: "Fira Sans", "Arial", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 26px;
+      color: rgba(72, 72, 72, 0.5);
+      border-left: 4px solid $yellow;
+    }
+  }
+
+  .steps__list {
+    padding-right: 0;
+  }
+}

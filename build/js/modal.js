@@ -10,6 +10,36 @@ const button = document.querySelector('.modal-order__form button');
 const successButtons = modalSuccess.querySelectorAll('button');
 const form = document.querySelector('.modal-order form');
 const checkbox = document.querySelector('#checkbox');
+const callWantToGo = document.querySelector('.iwanttogo__form button');
+
+let addCloseOverlay = function () {
+  document.addEventListener('click', function (eve) {
+    if (eve.buton === 0 && !eve.target.classList.contains('modal-order')) {
+      modalOrder.classList.add('visually-hidden');
+    }
+  })
+};
+
+callWantToGo.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  modalOrder.classList.remove('visually-hidden');
+  phone.value = '';
+  username.value = '';
+  username.style.border = '2px solid #e3e3e3';
+  phone.style.border = '2px solid #e3e3e3';
+
+  modalOrderClose.addEventListener('click', function (eve) {
+    if (eve.button === 0) {
+      modalOrder.classList.add('visually-hidden');
+    }
+  });
+  document.addEventListener('keydown', function (eve) {
+    if (eve.key === 'Escape') {
+      modalOrder.classList.add('visually-hidden');
+    }
+  });
+  setTimeout(addCloseOverlay, 400);
+});
 
 callHeader.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -29,6 +59,7 @@ callHeader.addEventListener('click', function (evt) {
       modalOrder.classList.add('visually-hidden');
     }
   });
+  setTimeout(addCloseOverlay, 400);
 })
 
 
@@ -113,4 +144,3 @@ button.addEventListener('click', function (evt) {
 //   uploadForm(new FormData(form), onSuccessUpload);
 //   evt.preventDefault();
 // });
-
