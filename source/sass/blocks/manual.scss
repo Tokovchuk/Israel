@@ -3,10 +3,11 @@
   background-image: url("../../img/stamp.png"), url("../../img/watercolor_Bg_6.png");
   background-repeat: no-repeat;
   background-size: auto, contain;
-  background-position: right 400px, left 0;
+  background-position: right 400px, 0 0;
 }
 
 .manual__wrapper {
+  margin: 0 auto;
   max-width: 1366px;
   display: flex;
 }
