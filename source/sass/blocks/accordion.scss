@@ -1,0 +1,96 @@
+.accordion {
+  @include clearlist;
+  counter-reset: myCounter;
+  max-width: 560px;
+}
+
+.accordion__item {
+  padding-top: 38px;
+  padding-right: 80px;
+  padding-bottom: 32px;
+  position: relative;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+
+  &::before {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    position: absolute;
+    top: 25px;
+    left: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 48px;
+    color: $yellow;
+  }
+
+  &--active .accordion__content {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 37px;
+    width: 20px;
+    height: 15px;
+    background-image: url("../../img/icon-tick-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  &--active::after {
+    background-image: url("../../img/icon-tick-up.svg");
+  }
+}
+
+.accordion__trigger h3 {
+  margin: 0;
+  margin-bottom: 24px;
+  padding-left: 30px;
+  display: inline-block;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: $black;
+  cursor: pointer;
+}
+
+.accordion__content {
+  display: none;
+
+
+  &--active {
+    display: block;
+  }
+}
+
+.accordion__content p {
+  margin: 0;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  color: $black;
+  opacity: 0.74;
+}
+
+@media (max-width: $mobile-max) {
+  .accordion {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .accordion__content p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .accordion__item {
+    &::after {
+      right: 0;
+    }
+  }
+}

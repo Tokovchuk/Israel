@@ -1,0 +1,83 @@
+.promo {
+  padding-top: 280px;
+  padding-bottom: 130px;
+  background-image: url("../img/cynthia-magana-138943-unsplash.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.promo h2 {
+  margin: 0;
+  margin-left: 58%;
+  margin-bottom: 24px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $blue;
+}
+
+.promo p {
+  margin: 0;
+  margin-left: 58%;
+  margin-bottom: 46px;
+  max-width: 403px;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 29px;
+  color: #ffffff;
+  opacity: 0.87;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.promo__button {
+  margin-left: 58%;
+  padding-top: 20px;
+  padding-bottom: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  background: $gradient;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+  text-transform: uppercase;
+  border-radius: 80px;
+}
+
+@media (max-width: $mobile-max) {
+  .promo {
+    padding-top: 30px;
+    background-size: auto 272px;
+    background-position: 30% 30%;
+  }
+
+  .promo h2 {
+    margin: 0 auto;
+    margin-bottom: 96px;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+  }
+
+  .promo p {
+    margin: 0;
+    margin-bottom: 57px;
+    padding-left: 23px;
+    padding-right: 23px;
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 100%;
+  }
+
+  .promo__button {
+    margin: 0 auto;
+  }
+}

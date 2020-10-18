@@ -3,8 +3,6 @@ const dots = document.querySelectorAll('.life__dot');
 
 let index = 0;
 
-console.log(slides)
-
 const activeSlide = function (n) {
   for(slide of slides) {
     slide.classList.remove('life__slide--active');

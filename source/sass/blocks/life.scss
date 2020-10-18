@@ -1,3 +1,10 @@
+.life {
+  background-image: url("../../img/watch.png"), url("../../img/watercolor_Bg_5.png");
+  background-repeat: no-repeat;
+  background-size: auto, contain;
+  background-position: right 90%, center;
+}
+
 .life__wrapper {
   margin: 0 auto;
   text-align: center;
@@ -48,15 +55,6 @@
     left: 0;
     top: -67px;
   }
-
-  &:nth-child(2) img {
-    width: 211px;
-    height: 318px;
-  }
-
-  &:last-child img {
-    height: 318px;
-  }
 }
 
 .life__slide h3 {
@@ -70,7 +68,7 @@
   font-size: 21px;
   line-height: 25px;
   color: #ffffff;
-  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   text-align: left;
 }
 
@@ -94,7 +92,7 @@
   .life__slide {
     margin-bottom: 20px;
     position: relative;
-  
+
     &:first-child {
       position: relative;
       left: 0;
@@ -106,6 +104,7 @@
     &:first-child img {
       margin: 0 auto;
       display: block;
+      height: 100%;
     }
 
     &:first-child h3 {
@@ -124,6 +123,7 @@
     padding: 0;
     text-align: center;
   }
+
   .life__slide {
     margin: 0 auto;
     margin-bottom: 15px;
@@ -173,6 +173,7 @@
   .life__dots {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .life__dot {
@@ -188,6 +189,7 @@
       width: 8px;
       height: 8px;
       background-color: $yellow;
+      opacity: 1;
     }
   }
 }
