@@ -1,0 +1,80 @@
+.feedback__wrapper {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  max-width: 1171px;
+}
+
+.feedback__wrapper h2 {
+  margin: 0;
+  margin-bottom: 48px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $blue;
+  text-align: center;
+}
+
+.feedback__slider {
+  position: relative;
+}
+
+.feedback__item {
+  display: none;
+
+  &--active {
+    display: flex;
+  }
+}
+
+.feedback__item img {
+  margin-right: 40px;
+  max-height: 480px;
+}
+
+.feedback__content {
+  padding-top: 40px;
+}
+
+.feedback__button {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 8px;
+  height: 15px;
+  border: 0;
+  background: 0;
+  cursor: pointer;
+
+  &--prev {
+    background-image: url("../../img/icon-tick-left.svg");
+  }
+
+  &--next {
+    background-image: url("../../img/icon-tick-right.svg");
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .feedback__wrapper {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .feedback__item {
+    &--active {
+      display: block;
+    }
+  }
+
+  .feedback__item img {
+    margin: 0 auto;
+    display: block;
+    width: 240px;
+    height: 320px;
+  }
+}

@@ -20,27 +20,6 @@ let addCloseOverlay = function () {
   })
 };
 
-// callWantToGo.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   modalOrder.classList.remove('visually-hidden');
-//   phone.value = '';
-//   username.value = '';
-//   username.style.border = '2px solid #e3e3e3';
-//   phone.style.border = '2px solid #e3e3e3';
-
-//   modalOrderClose.addEventListener('click', function (eve) {
-//     if (eve.button === 0) {
-//       modalOrder.classList.add('visually-hidden');
-//     }
-//   });
-//   document.addEventListener('keydown', function (eve) {
-//     if (eve.key === 'Escape') {
-//       modalOrder.classList.add('visually-hidden');
-//     }
-//   });
-//   setTimeout(addCloseOverlay, 400);
-// });
-
 callHeader.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalOrder.classList.remove('visually-hidden');
@@ -61,8 +40,6 @@ callHeader.addEventListener('click', function (evt) {
   });
   setTimeout(addCloseOverlay, 400);
 })
-
-
 button.addEventListener('click', function (evt) {
   let inputError=false
   evt.preventDefault();
