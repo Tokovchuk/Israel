@@ -1,5 +1,5 @@
 .description {
-  padding-right: 164px;
+  padding-right: 149px;
 }
 
 .description__list {
@@ -16,6 +16,7 @@
 
 .description__item h3 {
   margin: 0;
+  margin-top: 17px;
   margin-bottom: 24px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700;
@@ -40,6 +41,7 @@
   }
 
   .description__item h3 {
+    margin-bottom: 16px;
     padding-left: 16px;
     padding-right: 16px;
     font-size: 24px;
@@ -48,7 +50,7 @@
 
   .description__item p {
     padding-left: 16px;
-    padding-right: 16px;
+    padding-right: 19px;
     font-size: 14px;
     line-height: 22px;
   }

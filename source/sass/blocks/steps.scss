@@ -1,6 +1,6 @@
 .steps p {
-  margin-bottom: 24px;
-  padding-right: 100px;
+  margin-bottom: 32px;
+  padding-right: 65px;
   font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 500;
   font-size: 17px;
@@ -8,26 +8,27 @@
   color: rgba(72, 72, 72, 0.87);
 
   &:last-child {
-    padding-left: 16px;
+    padding-left: 13px;
+    padding-right: 0;
     font-family: "Fira Sans", "Arial", sans-serif;
     font-weight: 400;
     font-size: 15px;
-    line-height: 26px;
+    line-height: 21px;
     color: rgba(72, 72, 72, 0.5);
     border-left: 4px solid $yellow;
   }
 }
 
 .steps__list {
-  padding-right: 100px;
-  counter-reset: myCounter;
-  margin-bottom: 48px;
+  padding-right: 70px;
+  margin-bottom: 44px;
   padding-left: 42px;
+  counter-reset: myCounter;
   border-left: 1px dashed rgba(72, 72, 72, 0.87);
 }
 
 .steps__item {
-  margin-bottom: 40px;
+  margin-bottom: 47px;
   position: relative;
   list-style: none;
   font-family: "Fira Sans", "Arial", sans-serif;
@@ -44,8 +45,8 @@
     counter-increment: myCounter;
     content: counter(myCounter);
     position: absolute;
-    top: 0;
-    left: -61px;
+    top: -6px;
+    left: -59px;
     color: $yellow;
     background: #ffffff;
     display: inline-block;
@@ -62,22 +63,38 @@
 @media (max-width: $mobile-max) {
   .steps p {
     padding: 0;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     font-size: 16px;
     line-height: 26px;
 
     &:last-child {
-      padding-left: 16px;
+      margin-bottom: 0;
+      position: relative;
+      left: -6px;
+      padding-left: 10px;
       font-family: "Fira Sans", "Arial", sans-serif;
       font-weight: 400;
-      font-size: 15px;
-      line-height: 26px;
+      font-size: 14px;
+      line-height: 22px;
       color: rgba(72, 72, 72, 0.5);
       border-left: 4px solid $yellow;
     }
   }
 
   .steps__list {
+    margin-bottom: 23px;
+    margin-left: 10px;
     padding-right: 0;
+    padding-left: 33px;
+  }
+
+  .steps__item {
+    margin-bottom: 41px;
+    font-size: 14px;
+    line-height: 22px;
+
+    &::before {
+      left: -52px;
+    }
   }
 }

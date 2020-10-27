@@ -8,38 +8,15 @@ const username = document.querySelector('#username');
 const phone = document.querySelector('#phone');
 const button = document.querySelector('.modal-order__form button');
 const successButtons = modalSuccess.querySelectorAll('button');
-const form = document.querySelector('.modal-order form');
 const checkbox = document.querySelector('#checkbox');
-const callWantToGo = document.querySelector('.iwanttogo__form button');
 
 let addCloseOverlay = function () {
   document.addEventListener('click', function (eve) {
     if (eve.buton === 0 && !eve.target.classList.contains('modal-order')) {
       modalOrder.classList.add('visually-hidden');
     }
-  })
+  });
 };
-
-// callWantToGo.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   modalOrder.classList.remove('visually-hidden');
-//   phone.value = '';
-//   username.value = '';
-//   username.style.border = '2px solid #e3e3e3';
-//   phone.style.border = '2px solid #e3e3e3';
-
-//   modalOrderClose.addEventListener('click', function (eve) {
-//     if (eve.button === 0) {
-//       modalOrder.classList.add('visually-hidden');
-//     }
-//   });
-//   document.addEventListener('keydown', function (eve) {
-//     if (eve.key === 'Escape') {
-//       modalOrder.classList.add('visually-hidden');
-//     }
-//   });
-//   setTimeout(addCloseOverlay, 400);
-// });
 
 callHeader.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -60,41 +37,39 @@ callHeader.addEventListener('click', function (evt) {
     }
   });
   setTimeout(addCloseOverlay, 400);
-})
-
-
+});
 button.addEventListener('click', function (evt) {
-  let inputError=false
+  let inputError = false;
   evt.preventDefault();
 
   if (!username.value) {
     username.style.border = '2px solid rgba(255, 0, 0, 0.5)';
-    inputError=true;
+    inputError = true;
   }
   if (!phone.value) {
     phone.style.border = '2px solid rgba(255, 0, 0, 0.5)';
     phone.innerHTML = 'dsadsadas';
   }
   if (!checkbox.checked) {
-    inputError=true;
+    inputError = true;
     checkbox.innerHTML = 'dsadsadas';
   }
   if (!inputError) {
     // form.submit();
     modalOrder.classList.add('visually-hidden');
     modalSuccess.classList.remove('visually-hidden');
-    successButtons.forEach(function(item) {
-      item.addEventListener('click', function (evt) {
-        if(evt.button === 0) {
+    successButtons.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        if (e.button === 0) {
           modalSuccess.classList.add('visually-hidden');
         }
-      })
-    })
-    document.addEventListener('keydown', function (evt) {
-      if(evt.key === 'Escape') {
+      });
+    });
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape') {
         modalSuccess.classList.add('visually-hidden');
       }
-    })
+    });
   }
 });
 

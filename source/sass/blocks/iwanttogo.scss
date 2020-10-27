@@ -1,9 +1,10 @@
 .iwanttogo {
-  padding-top: 209px;
+  margin-bottom: 190px;
+  padding-top: 191px;
   padding-bottom: 131px;
   background-image: url("../../img/backpack.png");
   background-repeat: no-repeat;
-  background-position: left 170px;
+  background-position: left 117px;
   overflow: hidden;
 }
 
@@ -36,7 +37,7 @@
 
 .iwanttogo__call p {
   margin: 0 auto;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
   padding-right: 50px;
   max-width: 720px;
   font-family: "Fira Sans", "Arial", sans-serif;
@@ -91,8 +92,8 @@
 
 .iwanttogo img {
   position: absolute;
-  right: -17%;
-  top: -80%;
+  right: -18%;
+  top: -83%;
   z-index: -1;
   width: auto;
   max-width: 818px;
@@ -114,6 +115,11 @@
 }
 
 @media (max-width: $mobile-max) {
+  .iwanttogo {
+    padding: 0;
+    margin-bottom: 80px;
+  }
+
   .iwanttogo__wrapper {
     padding-left: 16px;
     padding-right: 16px;
@@ -139,6 +145,7 @@
   }
 
   .iwanttogo__call p {
+    margin-bottom: 23px;
     padding: 0;
     font-size: 16px;
     line-height: 26px;
@@ -146,12 +153,18 @@
 
   .iwanttogo__form input {
     margin-bottom: 8px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    text-transform: lowercase;
   }
 
   .iwanttogo button {
+    margin: 0 auto;
+    padding-bottom: 16px;
     display: block;
-    width: 100%;
+    width: 264px;
     position: static;
+    font-size: 15px;
     transform: none;
   }
 }

@@ -8,8 +8,13 @@
   padding-top: 38px;
   padding-right: 80px;
   padding-bottom: 32px;
+  width: 560px;
   position: relative;
   border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+
+  &:nth-child(n+5) {
+    padding-bottom: 24px;
+  }
 
   &::before {
     counter-increment: myCounter;
@@ -30,8 +35,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 40px;
-    right: 37px;
+    top: 43px;
+    right: 35px;
     width: 20px;
     height: 15px;
     background-image: url("../../img/icon-tick-down.svg");
@@ -47,7 +52,7 @@
 
 .accordion__trigger h3 {
   margin: 0;
-  margin-bottom: 24px;
+  padding-right: 85px;
   padding-left: 30px;
   display: inline-block;
   font-family: "Fira Sans", "Arial", sans-serif;
@@ -69,6 +74,7 @@
 
 .accordion__content p {
   margin: 0;
+  margin-top: 24px;
   font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -83,12 +89,32 @@
     max-width: 100%;
   }
 
+  .accordion__trigger h3 {
+    padding: 0;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
   .accordion__content p {
+    margin-top: 17px;
     font-size: 14px;
     line-height: 22px;
   }
 
   .accordion__item {
+    padding-right: 25px;
+    padding-bottom: 15px;
+    width: 100%;
+
+    &:nth-child(2n) {
+      padding-bottom: 22px;
+    }
+
+    &:nth-child(n+5) {
+      padding-bottom: 15px;
+    }
+
     &::after {
       right: 0;
     }

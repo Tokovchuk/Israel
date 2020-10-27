@@ -1,8 +1,13 @@
 .life {
+  margin-bottom: 83px;
   background-image: url("../../img/watch.png"), url("../../img/watercolor_Bg_5.png");
   background-repeat: no-repeat;
   background-size: auto, contain;
-  background-position: right 90%, center;
+  background-position: right 85%, center;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../../img/watch@2x.png"), url("../../img/watercolor_Bg_5@2x.png");
+  }
 }
 
 .life__wrapper {
@@ -39,7 +44,7 @@
 
 .life__slides {
   margin-left: auto;
-  padding-left: 471px;
+  padding-left: 487px;
   display: flex;
   flex-wrap: wrap;
   justify-content: stretch;
@@ -47,13 +52,17 @@
 }
 
 .life__slide {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   position: relative;
 
   &:first-child {
     position: absolute;
     left: 0;
     top: -67px;
+  }
+
+  &:nth-child(2n) {
+    margin-right: 35px;
   }
 }
 
@@ -118,6 +127,24 @@
 }
 
 @media (max-width: $mobile-max) {
+  .life {
+    margin-bottom: 50px;
+  }
+
+  .life__wrapper h2 {
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  .life__wrapper p {
+    margin-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 28px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+  }
+
   .life__slides {
     margin: 0 auto;
     padding: 0;
@@ -139,11 +166,15 @@
       position: static;
       width: 288px;
       height: 400px;
+      text-align: center;
     }
 
     &:first-child h3 {
+      margin: 0 auto;
       padding-left: 16px;
       padding-right: 16px;
+      left: 50%;
+      bottom: 38px;
       width: 288px;
     }
   }
@@ -155,7 +186,7 @@
 
     &:nth-child(n) {
       height: 100%;
-      width: 100%;
+      width: auto;
     }
   }
 
@@ -171,13 +202,14 @@
   }
 
   .life__dots {
+    padding-left: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .life__dot {
-    margin-right: 10px;
+    margin-right: 8px;
     display: block;
     width: 6px;
     height: 6px;

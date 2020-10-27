@@ -1,8 +1,11 @@
+.feedback {
+  margin-bottom: 70px;
+}
+
 .feedback__wrapper {
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 50px;
   max-width: 1171px;
 }
 
@@ -32,12 +35,11 @@
 }
 
 .feedback__item img {
-  margin-right: 40px;
+  position: relative;
+  top: -40px;
+  left: -28px;
+  margin-right: 10px;
   max-height: 480px;
-}
-
-.feedback__content {
-  padding-top: 40px;
 }
 
 .feedback__button {
@@ -60,9 +62,19 @@
 }
 
 @media (max-width: $mobile-max) {
+  .feedback {
+    margin-bottom: 114px;
+  }
+
   .feedback__wrapper {
     padding-right: 16px;
     padding-left: 16px;
+  }
+
+  .feedback__wrapper h2 {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 39px;
   }
 
   .feedback__item {
@@ -73,8 +85,11 @@
 
   .feedback__item img {
     margin: 0 auto;
+    margin-bottom: 13px;
     display: block;
     width: 240px;
     height: 320px;
+    top: 0;
+    left: 0;
   }
 }

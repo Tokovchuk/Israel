@@ -1,26 +1,32 @@
 .header {
+  margin-bottom: 20px;
+  padding-top: 31px;
+  padding-bottom: 112px;
   position: relative;
-  padding-top: 47px;
-  padding-bottom: 146px;
   background-color: #ebecee;
   background-image: url("../img/girl.png"), url("../img/israel.png"), url("../img/bg.jpg");
   background-repeat: no-repeat;
-  background-position: 48% 100%, 50% 28%, 50% 50%;
-  background-size: auto, auto, cover;
+  background-position: 48% 0, 52% 29%, 50% 50%;
+  background-size: auto, 76%, cover;
   text-align: center;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/girl@2x.png"), url("../img/israel@2x.png"), url("../img/bg@2x.jpg");
+  }
 }
 
 .header__menu {
   margin: 0 auto;
   padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 15px;
   max-width: 1171px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header__menu a[href] {
+.header__call,
+.header__tel {
   font-family: "Fira sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 18px;
@@ -39,6 +45,8 @@
 }
 
 .header__call {
+  margin-left: 30px;
+  font-size: 13px;
   border-bottom: 1px dashed $black;
 
   &:hover {
@@ -49,7 +57,7 @@
 .header__title {
   margin: 0 auto;
   margin-bottom: 32px;
-  padding-top: 472px;
+  padding-top: 456px;
   font-family: "Fira sans", "Arial", sans-serif;
   font-size: 24px;
   line-height: 29px;
@@ -66,13 +74,15 @@
 
 @media (max-width: $mobile-max) {
   .header {
-    padding-top: 20px;
-    padding-bottom: 16px;
+    margin-bottom: 50px;
+    padding-top: 21px;
+    padding-bottom: 30px;
     background-position: 50% -100%, 50% 38%, 50% 50%;
     background-size: 920px, 107%, cover;
   }
 
   .header__menu {
+    padding-right: 9px;
     flex-direction: column;
     align-items: flex-end;
   }
@@ -92,6 +102,7 @@
 
     &:last-child {
       margin-bottom: 0;
+      font-size: 13px;
     }
   }
 

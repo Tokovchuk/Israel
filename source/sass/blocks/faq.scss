@@ -1,9 +1,13 @@
 .faq {
-  padding-bottom: 100px;
+  padding-bottom: 90px;
   background-image: url("../img/bag.png"), url("../img/watercolor_Bg_4.png");
   background-repeat: no-repeat;
   background-size: auto, cover;
-  background-position: left bottom, center 0;
+  background-position: left 727px, center 0;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/bag@2x.png"), url("../img/watercolor_Bg_4@2x.png");
+  }
 }
 
 .faq__wrapper {
@@ -20,7 +24,7 @@
 .faq__wrapper h2 {
   width: 100%;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 9px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700;
   font-size: 40px;
@@ -35,14 +39,21 @@
 }
 
 .faq__container img {
+  position: relative;
+  top: -50px;
+  left: -7px;
   max-height: 803px;
   height: 100%;
-  width: 50%;
   max-width: 645px;
 }
 
 @media (max-width: $mobile-max) {
+  .faq {
+    padding: 0;
+  }
+
   .faq__wrapper {
+    margin-bottom: 80px;
     padding-left: 16px;
     padding-right: 16px;
     width: 100%;
@@ -57,9 +68,9 @@
   }
 
   .faq__wrapper h2 {
-    margin-bottom: 24px;
+    margin: 0;
     font-size: 32px;
-    line-height: 29px;
+    line-height: 39px;
     text-align: center;
   }
 }

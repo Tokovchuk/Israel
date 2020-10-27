@@ -18,7 +18,11 @@
       <div class="header__menu">
         <a href="tel:+(972)26216581" class="header__tel" title="Телефон для связи +(972)2–621–6581">+ (972) 2 – 621 – 6581</a>
         <a class="header__logo" title="Логотип компании">
-          <img src="img/logo.png" width="137" height="48" alt="Логотип компании">
+          <picture>
+            <source type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
+            <!-- 1x: 137x48; 2x: 274x96 -->
+            <img src="img/logo.png" srcset="img/logo@2x.png 2x" width="137" height="48" alt="Логотип компании">
+          </picture>
         </a>
         <a href="#" class="header__call" title="Заказать звонок">Заказать звонок</a>
       </div>
@@ -45,7 +49,11 @@
             В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.
           </p>
           <div class="programs__media">
-            <img src="img/photo.png" width="870" height="460" alt="Веселые ребята">
+            <picture>
+              <source type="image/webp" srcset="img/photo.webp 1x, img/photo@2x.webp 2x">
+              <!-- 1x: 870x460; 2x: 1740x920 -->
+              <img src="img/photo.png" srcset="img/photo@2x.png 2x" width="870" height="460" alt="Веселые ребята">
+            </picture>
             <button type="button" aria-label="Запустить видео">
               <svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#icon-play"></use>
@@ -87,11 +95,11 @@
               </li>
               <li class="description__item" id="academy">
                 <h3>Академические</h3>
-                <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями,
+                <p>Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями,
                   традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного
                   мира, это  также академический центр, живая лаборатория идей и творческого исследования.
                 </p>
-                <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
+                <p>Может быть, Вы заинтересованы в&nbsp;изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
                   законодательного и&nbsp;делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в
                   удивительной университетской среде.
                 </p>
@@ -103,7 +111,7 @@
                   мира, это  также академический центр, живая лаборатория идей и творческого исследования.
                 </p>
                 <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
-                  законодательного и&nbsp;делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в
+                  законодательного и&nbsp;делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в&nbsp;
                   удивительной университетской среде.
                 </p>
               </li>
@@ -138,20 +146,28 @@
           <div class="iwanttogo__call">
             <h2>Хочу поехать!</h2>
             <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
-            <form action="" class="iwanttogo__form">
+            <form class="iwanttogo__form">
               <input type="tel" name="tel" id="tel" placeholder="телефон" required="" aria-label="Введите номер телефона">
               <button type="submit" aria-label="Перезвоните мне">Перезвоните мне</button>
             </form>
           </div>
-          <img src="img/girl-flag-bg.png" width="818" height="594" alt="Девушка с фалгом Израиля">
+          <picture>
+            <source type="image/webp" srcset="img/girl-flag-bg.webp 1x, img/girl-flag-bg@2x.webp 2x">
+            <!-- 1x: 818x594; 2x: 1636x1188 -->
+            <img src="img/girl-flag-bg.png" srcset="img/girl-flag-bg@2x.png 2x" width="818" height="594" alt="Девушка с фалгом Израиля">
+          </picture>
         </div>
       </section>
       <section class="manual">
         <div class="manual__wrapper">
-          <img src="img/manual.png" width="581" height="707" alt="Мужчина с женщиной">
+          <picture>
+            <source type="image/webp" srcset="img/manual.webp 1x, img/manual@2x.webp 2x">
+            <!-- 1x: 581x707; 2x: 1162x1404 -->
+            <img src="img/manual.png" srcset="img/manual@2x.png 2x" width="581" height="707" alt="Мужчина с женщиной">
+          </picture>
           <div class="manual__description">
             <h2>Как поехать</h2>
-            <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о
+            <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в&nbsp;вашем городе. Вы получите актуальные сведения о
               доступных программах и городах, в которых можете пройти программу.
             </p>
             <div class="manual__steps steps">
@@ -169,30 +185,50 @@
       </section>
       <section class="life">
         <div class="life__wrapper">
-          <h2>Жизнь в израиле</h2>
+          <h2>Жизнь в&nbsp;израиле</h2>
           <p>Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране
             и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.
           </p>
           <div class="life__slides">
             <div class="life__slide life__slide--active">
               <h3>Экскурсии по Израилю и&nbsp;знакомство с его историей</h3>
-              <img src="img/1img_2.png" width="482" height="732" alt="Достопремичательность">
+              <picture>
+                <source type="image/webp" srcset="img/1img_2.webp 1x, img/1img_2@2x.webp 2x">
+                <!-- 1x: 482x732; 2x: 964x1464 -->
+                <img src="img/1img_2.png" srcset="img/1img_2@2x.png 2x" width="482" height="732" alt="Достопремичательность">
+              </picture>
             </div>
             <div class="life__slide">
               <h3>Изучение иврита</h3>
-              <img src="img/1img_1.png" width="211" height="318" alt="Процесс аудирования">
+              <picture>
+                <source type="image/webp" srcset="img/1img_1.webp 1x, img/1img_1@2x.webp 2x">
+                <!-- 1x: 211x318; 2x: 422x636 -->
+                <img src="img/1img_1.png" srcset="img/1img_1@2x.png 2x" width="211" height="318" alt="Процесс аудирования">
+              </picture>
             </div>
             <div class="life__slide">
               <h3>Обучение современным навыкам и профессиям</h3>
-              <img src="img/3img.png" width="411" height="318" alt="Процесс обучения техгологиям">
+              <picture>
+                <source type="image/webp" srcset="img/3img.webp 1x, img/3img@2x.webp 2x">
+                <!-- 1x: 411x318; 2x: 822x636 -->
+                <img src="img/3img.png" srcset="img/3img@2x.png 2x" width="411" height="318" alt="Процесс обучения техгологиям">
+              </picture>
             </div>
             <div class="life__slide">
               <h3>Совместные творческие проекты с израильской молодежью</h3>
-              <img src="img/4img.png" width="411" height="318" alt="Команда веселых людей">
+              <picture>
+                <source type="image/webp" srcset="img/4img.webp 1x, img/4img@2x.webp 2x">
+                <!-- 1x: 411x318; 2x: 822x636 -->
+                <img src="img/4img.png" srcset="img/4img@2x.png 2x" width="411" height="318" alt="Команда веселых людей">
+              </picture>
             </div>
             <div class="life__slide">
               <h3>Развитие лидерства</h3>
-              <img src="img/5img.png" width="214" height="318" alt="Увереный в себе человек">
+              <picture>
+                <source type="image/webp" srcset="img/5img.webp 1x, img/5img@2x.webp 2x">
+                <!-- 1x: 214x318; 2x: 428x636 -->
+                <img src="img/5img.png" srcset="img/5img@2x.png 2x" width="214" height="318" alt="Увереный в себе человек">
+              </picture>
             </div>
           </div>
           <div class="life__dots">
@@ -206,8 +242,8 @@
       </section>
       <section class="promo">
         <h2>#Masaisrael</h2>
-        <p>Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о жизни,
-          учёбе и путешествиях в Израиле.
+        <p>Познакомьтесь с программой от&nbsp;первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни,
+          учёбе и путешествиях в&nbsp;Израиле.
         </p>
         <a class="promo__button" href="#" title="Посмотреть фотографии по хэштегу Masaisrael">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +313,7 @@
               </li>
               <li class="accordion__item">
                 <div class="accordion__trigger">
-                  <h3>Как выглдядит полный процесс регистрации на программу «Маса»?</h3>
+                  <h3>Как выглдядит полный процесс регистрации на&nbsp;программу «Маса»?</h3>
                 </div>
                 <div class="accordion__content">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, iste? Expedita aspernatur autem animi,
@@ -287,7 +323,11 @@
                 </div>
               </li>
             </ol>
-            <img src="img/faq.png" width="645" height="803" alt="Смеющиеся люди">
+            <picture>
+              <source type="image/webp" srcset="img/faq.webp 1x, img/faq@2x.webp 2x">
+              <!-- 1x: 645x803; 2x: 1290x1606 -->
+              <img src="img/faq.png" srcset="img/faq@2x.png 2x" width="645" height="803" alt="Смеющиеся люди">
+            </picture>
           </div>
         </div>
       </section>
@@ -296,7 +336,11 @@
           <h2>Отзывы</h2>
           <div class="feedback__slider">
             <div class="feedback__item">
-              <img src="img/img_Testimonials.jpg" alt="Ольга Михайлова">
+              <picture>
+                <source type="image/webp" srcset="img/img_Testimonials.webp 1x, img/img_Testimonials@2x.webp 2x">
+                <!-- 1x: 364x480; 2x: 728x960 -->
+                <img src="img/img_Testimonials.jpg" srcset="img/img_Testimonials@2x.jpg 2x" width="364" height="480" alt="Ольга Михайлова">
+              </picture>
               <div class="feedback__content review">
                 <div class="review__header">
                   <h3>Ольга Михайлова</h3>
@@ -314,7 +358,7 @@
                   <a href="#" title="ссылка на полный отзыв">Читать подробнее</a>
                 </div>
                 <div class="review__footer">
-                  <span>1/6</span>
+                  <span>1 / 6</span>
                   <button type="button" class="review__button review__button--prev" aria-label="Предыдущий отзыв"></button>
                   <button type="button" class="review__button review__button--next" aria-label="Следующий отзыв"></button>
                   <div class="review__socials">
@@ -338,7 +382,11 @@
               </div>
             </div>
             <div class="feedback__item">
-              <img src="img/img_Testimonials.jpg" alt="Ольга Михайлова">
+              <picture>
+                <source type="image/webp" srcset="img/img_Testimonials.webp 1x, img/img_Testimonials@2x.webp 2x">
+                <!-- 1x: 364x480; 2x: 728x960 -->
+                <img src="img/img_Testimonials.jpg" srcset="img/img_Testimonials@2x.jpg 2x" width="364" height="480" alt="Ольга Михайлова">
+              </picture>
               <div class="feedback__content review">
                 <div class="review__header">
                   <h3>Ольга Михайлова</h3>
@@ -356,7 +404,7 @@
                   <a href="#" title="ссылка на полный отзыв">Читать подробнее</a>
                 </div>
                 <div class="review__footer">
-                  <span>2/6</span>
+                  <span>2 / 6</span>
                   <button type="button" class="review__button review__button--prev" aria-label="Предыдущий отзыв"></button>
                   <button type="button" class="review__button review__button--next" aria-label="Следующий отзыв"></button>
                   <div class="review__socials">
@@ -380,7 +428,11 @@
               </div>
             </div>
             <div class="feedback__item feedback__item--active">
-              <img src="img/img_Testimonials.jpg" alt="Ольга Михайлова">
+              <picture>
+                <source type="image/webp" srcset="img/img_Testimonials.webp 1x, img/img_Testimonials@2x.webp 2x">
+                <!-- 1x: 364x480; 2x: 728x960 -->
+                <img src="img/img_Testimonials.jpg" srcset="img/img_Testimonials@2x.jpg 2x" width="364" height="480" alt="Ольга Михайлова">
+              </picture>
               <div class="feedback__content review">
                 <div class="review__header">
                   <h3>Ольга Михайлова</h3>
@@ -398,7 +450,7 @@
                   <a href="#" title="ссылка на полный отзыв">Читать подробнее</a>
                 </div>
                 <div class="review__footer">
-                  <span>3/6</span>
+                  <span>3 / 6</span>
                   <button type="button" class="review__button review__button--prev" aria-label="Предыдущий отзыв"></button>
                   <button type="button" class="review__button review__button--next" aria-label="Следующий отзыв"></button>
                   <div class="review__socials">
@@ -422,7 +474,11 @@
               </div>
             </div>
             <div class="feedback__item">
-              <img src="img/img_Testimonials.jpg" alt="Ольга Михайлова">
+              <picture>
+                <source type="image/webp" srcset="img/img_Testimonials.webp 1x, img/img_Testimonials@2x.webp 2x">
+                <!-- 1x: 364x480; 2x: 728x960 -->
+                <img src="img/img_Testimonials.jpg" srcset="img/img_Testimonials@2x.jpg 2x" width="364" height="480" alt="Ольга Михайлова">
+              </picture>
               <div class="feedback__content review">
                 <div class="review__header">
                   <h3>Ольга Михайлова</h3>
@@ -440,7 +496,7 @@
                   <a href="#" title="ссылка на полный отзыв">Читать подробнее</a>
                 </div>
                 <div class="review__footer">
-                  <span>4/6</span>
+                  <span>4 / 6</span>
                   <button type="button" class="review__button review__button--prev" aria-label="Предыдущий отзыв"></button>
                   <button type="button" class="review__button review__button--next" aria-label="Следующий отзыв"></button>
                   <div class="review__socials">
@@ -464,7 +520,11 @@
               </div>
             </div>
             <div class="feedback__item">
-              <img src="img/img_Testimonials.jpg" alt="Ольга Михайлова">
+              <picture>
+                <source type="image/webp" srcset="img/img_Testimonials.webp 1x, img/img_Testimonials@2x.webp 2x">
+                <!-- 1x: 364x480; 2x: 728x960 -->
+                <img src="img/img_Testimonials.jpg" srcset="img/img_Testimonials@2x.jpg 2x" width="364" height="480" alt="Ольга Михайлова">
+              </picture>
               <div class="feedback__content review">
                 <div class="review__header">
                   <h3>Ольга Михайлова</h3>
@@ -482,7 +542,7 @@
                   <a href="#" title="ссылка на полный отзыв">Читать подробнее</a>
                 </div>
                 <div class="review__footer">
-                  <span>5/6</span>
+                  <span>5 / 6</span>
                   <button type="button" class="review__button review__button--prev" aria-label="Предыдущий отзыв"></button>
                   <button type="button" class="review__button review__button--next" aria-label="Следующий отзыв"></button>
                   <div class="review__socials">
@@ -506,7 +566,11 @@
               </div>
             </div>
             <div class="feedback__item">
-              <img src="img/img_Testimonials.jpg" alt="Ольга Михайлова">
+              <picture>
+                <source type="image/webp" srcset="img/img_Testimonials.webp 1x, img/img_Testimonials@2x.webp 2x">
+                <!-- 1x: 364x480; 2x: 728x960 -->
+                <img src="img/img_Testimonials.jpg" srcset="img/img_Testimonials@2x.jpg 2x" width="364" height="480" alt="Ольга Михайлова">
+              </picture>
               <div class="feedback__content review">
                 <div class="review__header">
                   <h3>Ольга Михайлова</h3>
@@ -524,7 +588,7 @@
                   <a href="#" title="ссылка на полный отзыв">Читать подробнее</a>
                 </div>
                 <div class="review__footer">
-                  <span>6/6</span>
+                  <span>6 / 6</span>
                   <button type="button" class="review__button review__button--prev" aria-label="Предыдущий отзыв"></button>
                   <button type="button" class="review__button review__button--next" aria-label="Следующий отзыв"></button>
                   <div class="review__socials">
@@ -547,11 +611,96 @@
                 </div>
               </div>
             </div>
-            
+          </div>
+        </div>
+      </section>
+      <section class="details">
+        <div class="details__wrapper">
+          <h2>Узнать подробности</h2>
+          <div class="details__description">
+            <div class="details__info">
+              <span>Ваш город:</span>
+              <strong>Новосибирск</strong>
+              <div class="details__curator curator">
+                <picture>
+                  <source type="image/webp" srcset="img/curator.webp 1x, img/curator@2x.webp 2x">
+                  <!-- 1x: 112x112; 2x: 224x224 -->
+                  <img src="img/curator.png" srcset="img/curator@2x.png 2x" width="112" height="112" alt="Анна Горелик - куратор из Новосибирска">
+                </picture>
+                <div class="curator__info">
+                  <span>Ваш куратор:</span>
+                  <strong>Анна Горелик</strong>
+                  <p>Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
+                  <div class="curator__socials">
+                    <a href="#">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-fb"></use>
+                      </svg>
+                    </a>
+                    <a href="#">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-whatsup"></use>
+                      </svg>
+                    </a>
+                    <a href="#">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-tg"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <p>Куратор является опытным специалистом агентства Сохнут и&nbsp;знает о проекте «Маса» всё!
+                Свяжитесь с куратором, узнайте&nbsp;подробнее о программах и выберите свою !
+              </p>
+            </div>
+            <div class="details__map">
+              <img src="img/map.png" srcset="img/map@2x.png 2x" width="702" height="448" alt="Карта Новосибирска">
+              <img src="img/bluePin.png" width="18" height="28" alt="Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
+            </div>
+          </div>
+          <div class="details__callback">
+            <div class="details__questions">
+              <h3>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</h3>
+              <p>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
+            </div>
+            <form class="details__form">
+              <input type="text" name="name" placeholder="имя" aria-label="имя" required="">
+              <input type="tel" name="phone" placeholder="телефон" value="+7 (923) 41" aria-label="номер телефона" required="">
+              <button type="submit">Перезвонте мне</button>
+            </form>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <a class="footer__logo" title="логотип компании">
+          <picture>
+            <source type="image/webp" srcset="img/masa-bw.webp 1x, img/masa-bw@2x.webp 2x">
+            <!-- 1x: 85x27; 2x: 170x54 -->
+            <img src="img/masa-bw.png" srcset="img/masa-bw@wx.png 2x" width="85" height="27" alt="Логотип компании">
+          </picture>
+        </a>
+        <p>Copyright someDesignCompany ©2019</p>
+        <div class="footer__socials">
+          <a href="#">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#icon-twit"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
+            </svg>
+        </a></div>
+      </div>
+    </footer>
 
     <!-- Модалки -->
     <div class="modal-order visually-hidden">
