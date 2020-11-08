@@ -21,14 +21,14 @@
 
 .steps__list {
   padding-right: 70px;
-  margin-bottom: 44px;
+  margin-bottom: 48px;
   padding-left: 42px;
   counter-reset: myCounter;
   border-left: 1px dashed rgba(72, 72, 72, 0.87);
 }
 
 .steps__item {
-  margin-bottom: 47px;
+  margin-bottom: 46px;
   position: relative;
   list-style: none;
   font-family: "Fira Sans", "Arial", sans-serif;
@@ -36,6 +36,14 @@
   font-size: 15px;
   line-height: 21px;
   color: rgba(72, 72, 72, 0.87);
+
+  &:first-child {
+    margin-bottom: 53px;
+  }
+
+  &:nth-child(3n) {
+    margin-bottom: 38px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -49,7 +57,6 @@
     left: -59px;
     color: $yellow;
     background: #ffffff;
-    display: inline-block;
     font-size: 17px;
     font-weight: 700;
     text-align: center;
@@ -89,12 +96,25 @@
   }
 
   .steps__item {
-    margin-bottom: 41px;
+    margin-bottom: 38px;
     font-size: 14px;
     line-height: 22px;
 
     &::before {
       left: -52px;
+    }
+
+    &:first-child {
+      margin-bottom: 61px;
+    }
+
+    &:nth-child(3n) {
+      margin-bottom: 26px;
+      padding-right: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

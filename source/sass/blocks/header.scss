@@ -7,7 +7,7 @@
   background-image: url("../img/girl.png"), url("../img/israel.png"), url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-position: 48% 0, 52% 29%, 50% 50%;
-  background-size: auto, 76%, cover;
+  background-size: 100%, 76%, cover;
   text-align: center;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -54,7 +54,7 @@
   }
 }
 
-.header__title {
+.header h1 {
   margin: 0 auto;
   margin-bottom: 32px;
   padding-top: 456px;
@@ -64,6 +64,16 @@
   font-weight: 700;
   color: #ffffff;
   max-width: 380px;
+}
+
+.header__scroll {
+  padding: 0;
+  margin: 0;
+  width: 76px;
+  height: 132px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 @media (max-width: $tablet-max) {
@@ -106,7 +116,7 @@
     }
   }
 
-  .header__title {
+  .header h1 {
     margin: 0 auto;
     margin-bottom: 32px;
     padding-top: 272px;

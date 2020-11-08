@@ -4,11 +4,17 @@
   max-width: 560px;
 }
 
+.accordion__trigger {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+}
+
 .accordion__item {
   padding-top: 38px;
-  padding-right: 80px;
+  padding-right: 35px;
   padding-bottom: 32px;
-  width: 560px;
+  width: 100%;
   position: relative;
   border-bottom: 1px solid rgba(28, 28, 28, 0.2);
 
@@ -32,29 +38,31 @@
     display: block;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 43px;
-    right: 35px;
-    width: 20px;
-    height: 15px;
-    background-image: url("../../img/icon-tick-down.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
+  &--active .accordion__button {
+    background-image: url("../img/icon-tick-up.svg");
   }
+}
 
-  &--active::after {
-    background-image: url("../../img/icon-tick-up.svg");
-  }
+.accordion__button {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 5px;
+  width: 20px;
+  height: 15px;
+  border: 0;
+  background: none;
+  background-image: url("../img/icon-tick-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 
 .accordion__trigger h3 {
   margin: 0;
-  padding-right: 85px;
+  padding-right: 65px;
   padding-left: 30px;
-  display: inline-block;
+  display: block;
   font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 17px;
@@ -92,8 +100,10 @@
   .accordion__trigger h3 {
     padding: 0;
     padding-left: 25px;
+    padding-right: 18px;
     font-size: 16px;
     line-height: 26px;
+    max-width: 95%;
   }
 
   .accordion__content p {
@@ -103,7 +113,7 @@
   }
 
   .accordion__item {
-    padding-right: 25px;
+    padding-right: 0;
     padding-bottom: 15px;
     width: 100%;
 

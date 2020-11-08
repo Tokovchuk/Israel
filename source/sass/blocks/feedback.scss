@@ -1,5 +1,13 @@
 .feedback {
-  margin-bottom: 70px;
+  margin-bottom: 66px;
+  background-image: url("../img/sketch.png"), url("../img/watercolor_Bg_3.png");
+  background-repeat: no-repeat;
+  background-size: 523px 318px, cover;
+  background-position: right 20px, center 0;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/sketch@2x.png"), url("../img/watercolor_Bg_3@2x.png");
+  }
 }
 
 .feedback__wrapper {
@@ -31,6 +39,7 @@
 
   &--active {
     display: flex;
+    justify-content: flex-start;
   }
 }
 
@@ -40,6 +49,10 @@
   left: -28px;
   margin-right: 10px;
   max-height: 480px;
+}
+
+.feedback__content {
+  width: 66%;
 }
 
 .feedback__button {
@@ -53,11 +66,11 @@
   cursor: pointer;
 
   &--prev {
-    background-image: url("../../img/icon-tick-left.svg");
+    background-image: url("../img/icon-tick-left.svg");
   }
 
   &--next {
-    background-image: url("../../img/icon-tick-right.svg");
+    background-image: url("../img/icon-tick-right.svg");
   }
 }
 
@@ -75,6 +88,10 @@
     margin-bottom: 24px;
     font-size: 32px;
     line-height: 39px;
+  }
+
+  .feedback__content {
+    width: 100%;
   }
 
   .feedback__item {

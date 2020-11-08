@@ -2,7 +2,7 @@
   margin-bottom: 31px;
   background-image: url("../img/watercolor_Bg.png"), url("../img/sketch_Bg.png");
   background-repeat: no-repeat;
-  background-size: contain, auto;
+  background-size: contain, 523px 318px;
   background-position: center 150px, right 818px;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -12,7 +12,7 @@
 
 .programs__about {
   margin: 0 auto;
-  margin-bottom: 194px;
+  padding-bottom: 82px;
   max-width: 1005px;
   text-align: center;
 }
@@ -101,6 +101,7 @@
 }
 
 .programs__description {
+  padding-top: 109px;
   padding-left: 30px;
 }
 
@@ -134,7 +135,7 @@
 
 @media (max-width: $mobile-max) {
   .programs {
-    margin-bottom: 68px;
+    margin-bottom: 66px;
     background-size: contain, 100%;
   }
 
@@ -146,7 +147,7 @@
   }
 
   .programs__about {
-    margin-bottom: 77px;
+    padding-bottom: 40px;
   }
 
   .programs__about h2 {
@@ -167,6 +168,7 @@
   }
 
   .programs__description {
+    padding-top: 37px;
     padding-left: 0;
   }
 

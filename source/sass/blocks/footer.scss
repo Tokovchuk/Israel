@@ -31,6 +31,14 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 @media (max-width: $mobile-max) {

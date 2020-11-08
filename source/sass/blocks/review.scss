@@ -21,6 +21,7 @@
 .review__header span {
   margin-right: 8px;
   display: inline-block;
+  vertical-align: baseline;
   font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -31,6 +32,7 @@
 .review__header p {
   margin: 0;
   display: inline-block;
+  vertical-align: baseline;
   font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -63,7 +65,7 @@
 }
 
 .review__footer {
-  padding-right: 42px;
+  padding-right: 39px;
   display: flex;
   align-items: center;
   opacity: 0.5;
@@ -83,13 +85,21 @@
   background-size: cover;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+
   &--prev {
-    background-image: url("../../img/icon-tick-left.svg");
+    background-image: url("../img/icon-tick-left.svg");
   }
 
   &--next {
     margin-right: 0;
-    background-image: url("../../img/icon-tick-right.svg");
+    background-image: url("../img/icon-tick-right.svg");
   }
 }
 
@@ -98,14 +108,24 @@
 }
 
 .review__socials a {
-  margin-right: 14px;
+  margin-right: 13px;
   opacity: 0.16;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 @media (max-width: $mobile-max) {
   .review__footer {
+    margin: 0 auto;
     margin-bottom: 27px;
     padding: 0;
+    padding-left: 5px;
     order: -1;
     justify-content: center;
   }

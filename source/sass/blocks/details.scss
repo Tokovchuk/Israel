@@ -1,5 +1,13 @@
 .details {
-  margin-bottom: 73px;
+  margin-bottom: 72px;
+  background-image: url("../img/watercolor_Bg_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/watercolor_Bg_2@2x.png");
+  }
 }
 
 .details__wrapper {
@@ -24,11 +32,12 @@
 }
 
 .details__info > span {
-  margin-right: 14px;
+  margin-right: 11px;
   margin-bottom: 41px;
-  padding-left: 20px;
+  padding-left: 22px;
   position: relative;
   display: inline-block;
+  vertical-align: baseline;
   font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -49,9 +58,9 @@
   }
 }
 
-.details__info > strong {
+.details__info > button {
+  padding: 0;
   position: relative;
-  top: 3px;
   font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -59,12 +68,15 @@
   color: $black;
   opacity: 0.74;
   text-transform: uppercase;
+  background: 0;
+  border: none;
   border-bottom: 1px dashed $blue;
+  cursor: pointer;
 
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
+    top: 5px;
     right: -25px;
     width: 16px;
     height: 15px;
@@ -99,25 +111,16 @@
 
 .details__map {
   max-height: 448px;
+  max-width: 702px;
   height: auto;
   position: absolute;
   top: 10px;
-  right: 10px;
-}
-
-.details__map img {
-  width: 100%;
-
-  &:last-child {
-    width: 18px;
-    position: absolute;
-    top: 51%;
-    left: 74%;
-  }
+  right: 0;
 }
 
 .details__info {
-  width: 50%;
+  max-width: 50%;
+  min-width: 50%;
   margin-bottom: 100px;
 }
 
@@ -158,6 +161,8 @@
 .details__form {
   display: flex;
   flex-wrap: nowrap;
+  position: relative;
+  top: -2px;
 }
 
 .details__form input {
@@ -177,9 +182,18 @@
   line-height: 17px;
   text-transform: uppercase;
 
-  &:focus {
+  &:focus,
+  &:focus:valid {
     border: 2px solid $yellow;
     outline: 0;
+  }
+
+  &:invalid:not(:placeholder-shown):not(:focus) {
+    border: 2px solid rgba(255, 0, 0, 0.5);
+  }
+
+  &:valid {
+    border: 2px solid rgba(72, 72, 72, 0.5);
   }
 }
 
@@ -203,6 +217,10 @@
   &:hover {
     background: $gradient__hover;
   }
+
+  &:active {
+    background: $gradient__active;
+  }
 }
 
 @media (max-width: $tablet-max) {
@@ -211,14 +229,21 @@
   }
 
   .details__info {
+    margin-right: 0;
     margin-bottom: 30px;
-    width: 100%;
+    max-width: 100%;
+  }
+
+  .details__info > p {
+    padding-right: 0;
   }
 
   .details__map {
     margin: 0;
     position: relative;
-    width: 702px;
+    right: 0;
+    width: 100%;
+    max-width: 702px;
   }
 
   .details__callback {
@@ -263,6 +288,10 @@
     overflow: hidden;
   }
 
+  .details__info > span {
+    margin-bottom: 39px;
+  }
+
   .details__info > p {
     padding: 0;
     font-size: 16px;
@@ -283,7 +312,10 @@
   }
 
   .details__form input {
-    margin-bottom: 10px;
+    margin: 0;
+    margin-bottom: 8px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     width: 100%;
     max-width: 288px;
   }
@@ -296,7 +328,7 @@
   }
 
   .details__questions {
-    margin-bottom: 35px;
+    margin-bottom: 36px;
     width: 100%;
   }
 
@@ -313,5 +345,12 @@
   .details__map {
     margin-bottom: 3px;
     height: 420px;
+    overflow: hidden;
+  }
+
+  .details__map img {
+    object-fit: cover;
+    object-position: 64%;
+    height: 100%;
   }
 }

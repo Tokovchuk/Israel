@@ -1,8 +1,9 @@
 .faq {
-  padding-bottom: 90px;
+  padding-top: 135px;
+  padding-bottom: 67px;
   background-image: url("../img/bag.png"), url("../img/watercolor_Bg_4.png");
   background-repeat: no-repeat;
-  background-size: auto, cover;
+  background-size: 153px 177px, cover;
   background-position: left 727px, center 0;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -34,18 +35,22 @@
   color: $blue;
 }
 
-.faq__accordion {
-  flex-basis: 40%;
-}
-
 .faq__container img {
   position: relative;
-  top: -50px;
-  left: -7px;
+  top: -56px;
+  left: 0;
   max-height: 803px;
-  height: 100%;
+  width: 100%;
   max-width: 645px;
 }
+
+
+@media (max-width: $tablet-max) {
+  .faq__container img {
+    display: none;
+  }
+}
+
 
 @media (max-width: $mobile-max) {
   .faq {
@@ -57,10 +62,6 @@
     padding-left: 16px;
     padding-right: 16px;
     width: 100%;
-  }
-
-  .faq__container img {
-    display: none;
   }
 
   .faq__accordion {

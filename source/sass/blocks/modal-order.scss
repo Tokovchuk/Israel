@@ -1,4 +1,13 @@
 .modal-order {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal-order__wrapper {
+  margin-bottom: 100px;
   padding-top: 56px;
   padding-bottom: 40px;
   padding-left: 48px;
@@ -13,7 +22,17 @@
   z-index: 10;
 }
 
-.modal-order h2 {
+.modal-order__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ebebeb;
+  opacity: 0.95;
+}
+
+.modal-order__wrapper h2 {
   margin: 0;
   margin-bottom: 16px;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -24,7 +43,7 @@
   color: $blue;
 }
 
-.modal-order p {
+.modal-order__wrapper p {
   margin: 0;
   margin-bottom: 32px;
   font-family: "Fira sans", "Arial", sans-serif;
@@ -70,11 +89,25 @@
     }
   }
 
-  &:focus {
+  &:focus,
+  &:focus:valid {
     border: 2px solid $yellow;
     outline: 0;
+
+    & ~ span {
+      outline: 2px solid $black;
+    }
+  }
+
+  &:invalid:not(:placeholder-shown):not(:focus) {
+    border: 2px solid rgba(255, 0, 0, 0.5);
+  }
+
+  &:valid {
+    border: 2px solid rgba(72, 72, 72, 0.5);
   }
 }
+
 
 .modal-order__form input[type="tel"] {
   margin-bottom: 24px;
@@ -167,26 +200,26 @@
 }
 
 @media (max-width: $mobile-max) {
-  .modal-order {
+  .modal-order__wrapper {
     padding-top: 169px;
     padding-bottom: 169px;
     padding-left: 16px;
     padding-right: 16px;
-    position: absolute;
     top: 0;
     left: 0;
     transform: translateX(0);
     width: 100%;
+    height: 100%;
     border-radius: 0;
   }
 
-  .modal-order h2 {
+  .modal-order__wrapper h2 {
     font-size: 24px;
     line-height: 29px;
     text-align: center;
   }
 
-  .modal-order p {
+  .modal-order__wrapper p {
     font-size: 14px;
     line-height: 22px;
     text-align: center;
