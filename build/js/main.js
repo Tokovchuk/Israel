@@ -56,7 +56,7 @@
     modalSuccess.classList.remove('visually-hidden');
   });
 
-  successButtons.forEach( function (item) {
+  successButtons.forEach(function (item) {
     item.addEventListener('click', function (e) {
       if (e.button === 0) {
         modalSuccess.classList.add('visually-hidden');
@@ -86,79 +86,11 @@
     evt.preventDefault();
     modalSuccess.classList.remove('visually-hidden');
     body.style.overflow = 'hidden';
-    // successButtons.forEach(function (item) {
-    //   item.addEventListener('click', function (e) {
-    //     if (e.button === 0) {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       iWantToGoForm.submit();
-    //       iWantToGoTel.value = '';
-    //       iWantToGoTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-
-    //   overlaySuccess.addEventListener('click', function (e) {
-    //     if (e.button === 0) {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       iWantToGoForm.submit();
-    //       iWantToGoTel.value = '';
-    //       iWantToGoTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-
-    //   document.addEventListener('keydown', function (e) {
-    //     if (e.key === 'Escape') {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       iWantToGoForm.submit();
-    //       iWantToGoTel.value = '';
-    //       iWantToGoTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-    // });
   });
 
   detailsForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
     modalSuccess.classList.remove('visually-hidden');
-    // successButtons.forEach(function (item) {
-    //   item.addEventListener('click', function (e) {
-    //     if (e.button === 0) {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       detailsForm.submit();
-    //       detailsName.value = '';
-    //       detailsTel.value = '';
-    //       detailsName.style.border = '2px solid #e3e3e3';
-    //       detailsTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-
-    //   overlaySuccess.addEventListener('click', function (e) {
-    //     if (e.button === 0) {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       detailsForm.submit();
-    //       detailsName.value = '';
-    //       detailsTel.value = '';
-    //       detailsName.style.border = '2px solid #e3e3e3';
-    //       detailsTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-
-    //   document.addEventListener('keydown', function (e) {
-    //     if (e.key === 'Escape') {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       detailsForm.submit();
-    //       detailsName.value = '';
-    //       detailsTel.value = '';
-    //       detailsName.style.border = '2px solid #e3e3e3';
-    //       detailsTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-    // });
   });
 
   // Кнопка скрола
@@ -171,24 +103,25 @@
 
   // Табы
 
-  const link = document.querySelectorAll('.panel__item');
+  const link = document.querySelectorAll('.panel__link');
   const card = document.querySelectorAll('.description__item');
+  const changeActive = function (e) {
+    e.preventDefault();
+    const id = e.target.getAttribute('href');
+
+    link.forEach(function (child) {
+      child.classList.remove('panel__item--active');
+    });
+    card.forEach(function (child) {
+      child.classList.remove('description__item--active');
+    });
+
+    e.target.classList.add('panel__item--active');
+    document.querySelector(id).classList.add('description__item--active');
+  }
 
   link.forEach(function (item) {
-    item.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      const id = evt.target.getAttribute('href');
-
-      link.forEach(function (child) {
-        child.classList.remove('panel__item--active');
-      });
-      card.forEach(function (child) {
-        child.classList.remove('description__item--active');
-      });
-
-      item.classList.add('panel__item--active');
-      document.querySelector(id).classList.add('description__item--active');
-    });
+    item.addEventListener('click', changeActive);
   });
 
   document.querySelector('.panel__link').click();
@@ -263,23 +196,23 @@
           activeDot(index);
         }
       };
-      
+
       // let xDown = null;
       // let yDown = null;
-      
+
       // const handleTouchStart = function (evt) {
         //   xDown = evt.touches[0].pageX;
         //   yDown = evt.touches[0].pageY;
       // };
-      
+
       const handleTouchMove = function (evt) {
         if (!xDown || !yDown) {
           return;
         }
-        
+
         let xUp = evt.touches[0].pageX;
         let yUp = evt.touches[0].pageY;
-        
+
         let xDiff = xDown - xUp;
         let yDiff = yDown - yUp;
         if (Math.abs(xDiff) > Math.abs(yDiff)) {

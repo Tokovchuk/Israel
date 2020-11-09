@@ -15,10 +15,7 @@
   const body = document.querySelector('body');
   const checkboxText = document.querySelector('.modal-order__form span');
   const iWantToGoForm = document.querySelector('.iwanttogo__form');
-  const iWantToGoTel = iWantToGoForm.querySelector('input');
   const detailsForm = document.querySelector('.details__form');
-  const detailsName = document.querySelector('#details-name');
-  const detailsTel = document.querySelector('#details-tel');
 
   callHeader.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -86,79 +83,11 @@
     evt.preventDefault();
     modalSuccess.classList.remove('visually-hidden');
     body.style.overflow = 'hidden';
-    // successButtons.forEach(function (item) {
-    //   item.addEventListener('click', function (e) {
-    //     if (e.button === 0) {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       iWantToGoForm.submit();
-    //       iWantToGoTel.value = '';
-    //       iWantToGoTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-
-    //   overlaySuccess.addEventListener('click', function (e) {
-    //     if (e.button === 0) {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       iWantToGoForm.submit();
-    //       iWantToGoTel.value = '';
-    //       iWantToGoTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-
-    //   document.addEventListener('keydown', function (e) {
-    //     if (e.key === 'Escape') {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       iWantToGoForm.submit();
-    //       iWantToGoTel.value = '';
-    //       iWantToGoTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-    // });
   });
 
   detailsForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
     modalSuccess.classList.remove('visually-hidden');
-    // successButtons.forEach(function (item) {
-    //   item.addEventListener('click', function (e) {
-    //     if (e.button === 0) {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       detailsForm.submit();
-    //       detailsName.value = '';
-    //       detailsTel.value = '';
-    //       detailsName.style.border = '2px solid #e3e3e3';
-    //       detailsTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-
-    //   overlaySuccess.addEventListener('click', function (e) {
-    //     if (e.button === 0) {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       detailsForm.submit();
-    //       detailsName.value = '';
-    //       detailsTel.value = '';
-    //       detailsName.style.border = '2px solid #e3e3e3';
-    //       detailsTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-
-    //   document.addEventListener('keydown', function (e) {
-    //     if (e.key === 'Escape') {
-    //       modalSuccess.classList.add('visually-hidden');
-    //       body.style.overflow = 'visible';
-    //       detailsForm.submit();
-    //       detailsName.value = '';
-    //       detailsTel.value = '';
-    //       detailsName.style.border = '2px solid #e3e3e3';
-    //       detailsTel.style.border = '2px solid #e3e3e3';
-    //     }
-    //   });
-    // });
   });
 
   // Кнопка скрола
@@ -171,24 +100,25 @@
 
   // Табы
 
-  const link = document.querySelectorAll('.panel__item');
+  const link = document.querySelectorAll('.panel__link');
   const card = document.querySelectorAll('.description__item');
+  const changeActive = function (e) {
+    e.preventDefault();
+    const id = e.target.getAttribute('href');
+
+    link.forEach(function (child) {
+      child.classList.remove('panel__item--active');
+    });
+    card.forEach(function (child) {
+      child.classList.remove('description__item--active');
+    });
+
+    e.target.classList.add('panel__item--active');
+    document.querySelector(id).classList.add('description__item--active');
+  };
 
   link.forEach(function (item) {
-    item.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      const id = evt.target.getAttribute('href');
-
-      link.forEach(function (child) {
-        child.classList.remove('panel__item--active');
-      });
-      card.forEach(function (child) {
-        child.classList.remove('description__item--active');
-      });
-
-      item.classList.add('panel__item--active');
-      document.querySelector(id).classList.add('description__item--active');
-    });
+    item.addEventListener('click', changeActive);
   });
 
   document.querySelector('.panel__link').click();
