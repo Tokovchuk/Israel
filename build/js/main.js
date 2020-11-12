@@ -15,10 +15,7 @@
   const body = document.querySelector('body');
   const checkboxText = document.querySelector('.modal-order__form span');
   const iWantToGoForm = document.querySelector('.iwanttogo__form');
-  const iWantToGoTel = iWantToGoForm.querySelector('input');
   const detailsForm = document.querySelector('.details__form');
-  const detailsName = document.querySelector('#details-name');
-  const detailsTel = document.querySelector('#details-tel');
 
   callHeader.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -118,7 +115,7 @@
 
     e.target.classList.add('panel__item--active');
     document.querySelector(id).classList.add('description__item--active');
-  }
+  };
 
   link.forEach(function (item) {
     item.addEventListener('click', changeActive);
@@ -197,14 +194,6 @@
         }
       };
 
-      // let xDown = null;
-      // let yDown = null;
-
-      // const handleTouchStart = function (evt) {
-        //   xDown = evt.touches[0].pageX;
-        //   yDown = evt.touches[0].pageY;
-      // };
-
       const handleTouchMove = function (evt) {
         if (!xDown || !yDown) {
           return;
@@ -252,34 +241,53 @@
   const prevs = document.querySelectorAll('.review__button--prev');
   const nexts = document.querySelectorAll('.review__button--next');
   const sliderF = document.querySelector('.feedback__slider');
+  const track = document.querySelector('.feedback__track');
+  let currentIndex = 2;
+  let widthSlide = sliderF.clientWidth
+  let indexF = widthSlide * currentIndex;
 
-  let indexF = 2;
-
-  const activeSlideF = function (n) {
-    slidesF.forEach(function (slide) {
-      slide.classList.remove('feedback__item--active');
-    });
-    slidesF[n].classList.add('feedback__item--active');
-  };
-
-  const nextSlideF = function () {
-    if (indexF === slidesF.length - 1) {
-      indexF = 0;
-      activeSlideF(indexF);
+  
+  const setPosition = function () {
+    if (currentIndex === 0) {
+      prevs.forEach(function (btn) {
+        btn.setAttribute('disabled', 'true');
+      })
     } else {
-      indexF++;
-      activeSlideF(indexF);
+      prevs.forEach(function (btn) {
+        btn.removeAttribute('disabled');
+      })
     }
+
+    if (currentIndex === (slidesF.length - 1)) {
+      nexts.forEach(function (btn) {
+        btn.setAttribute('disabled', 'true');
+      })
+    } else {
+      nexts.forEach(function (btn) {
+        btn.removeAttribute('disabled');
+      })
+    }
+
+    indexF = widthSlide * currentIndex;
+    track.style.transform = `translateX(-${indexF}px)`;
+  }
+  
+  setPosition();
+
+  window.addEventListener('resize', function () {
+    widthSlide = sliderF.clientWidth
+    setPosition();
+  });
+  
+  
+  const nextSlideF = function () {
+    currentIndex++;
+    setPosition();
   };
 
   const prevSlideF = function () {
-    if (indexF === 0) {
-      indexF = slidesF.length - 1;
-      activeSlideF(indexF);
-    } else {
-      indexF--;
-      activeSlideF(indexF);
-    }
+    currentIndex--;
+    setPosition();
   };
 
   const activePressNext = function () {
@@ -325,6 +333,9 @@
     xDown = null;
     yDown = null;
   };
-  sliderF.addEventListener('touchstart', handleTouchStart, false);
-  sliderF.addEventListener('touchmove', handleTouchMoveF, false);
+
+  if (currentIndex >= 0 && currentIndex <= slidesF.length) {
+    sliderF.addEventListener('touchstart', handleTouchStart, false);
+    sliderF.addEventListener('touchmove', handleTouchMoveF, false);
+  }
 })();
