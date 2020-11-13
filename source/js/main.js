@@ -243,43 +243,41 @@
   const sliderF = document.querySelector('.feedback__slider');
   const track = document.querySelector('.feedback__track');
   let currentIndex = 2;
-  let widthSlide = sliderF.clientWidth
+  let widthSlide = sliderF.clientWidth;
   let indexF = widthSlide * currentIndex;
 
-  
   const setPosition = function () {
     if (currentIndex === 0) {
       prevs.forEach(function (btn) {
         btn.setAttribute('disabled', 'true');
-      })
+      });
     } else {
       prevs.forEach(function (btn) {
         btn.removeAttribute('disabled');
-      })
+      });
     }
 
     if (currentIndex === (slidesF.length - 1)) {
       nexts.forEach(function (btn) {
         btn.setAttribute('disabled', 'true');
-      })
+      });
     } else {
       nexts.forEach(function (btn) {
         btn.removeAttribute('disabled');
-      })
+      });
     }
 
     indexF = widthSlide * currentIndex;
     track.style.transform = `translateX(-${indexF}px)`;
-  }
-  
+  };
+
   setPosition();
 
   window.addEventListener('resize', function () {
-    widthSlide = sliderF.clientWidth
+    widthSlide = sliderF.clientWidth;
     setPosition();
   });
-  
-  
+
   const nextSlideF = function () {
     currentIndex++;
     setPosition();
